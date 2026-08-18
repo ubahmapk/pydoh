@@ -2,17 +2,12 @@
 
 from __future__ import annotations
 
-import sys
 from dataclasses import dataclass, fields
 from pathlib import Path
 from typing import Any, TypeVar
 
+import tomli as tomllib
 from platformdirs import user_config_dir
-
-if sys.version_info >= (3, 11):
-    import tomllib
-else:
-    import tomli as tomllib
 
 APP_NAME = "pydoh"
 

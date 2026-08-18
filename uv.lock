@@ -110,7 +110,7 @@ dependencies = [
     { name = "platformdirs" },
     { name = "py-doh-core" },
     { name = "pyyaml" },
-    { name = "tomli", marker = "python_full_version < '3.11'" },
+    { name = "tomli" },
     { name = "typer" },
 ]
 
@@ -126,7 +126,7 @@ requires-dist = [
     { name = "platformdirs", specifier = ">=4.0" },
     { name = "py-doh-core", specifier = ">=0.1.1" },
     { name = "pyyaml", specifier = ">=6.0" },
-    { name = "tomli", marker = "python_full_version < '3.11'", specifier = ">=2.0" },
+    { name = "tomli", specifier = ">=2.0" },
     { name = "typer", specifier = ">=0.12" },
 ]
 
