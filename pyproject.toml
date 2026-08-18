@@ -1,0 +1,42 @@
+[project]
+name = "pydoh"
+version = "0.1.0"
+description = "A command-line DNS client for secure DNS transports (DoH, DoT, DoQ), built on py-doh-core"
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "Jon Mark Allen", email = "ubahmapk@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "platformdirs>=4.0",
+    "py-doh-core>=0.1.1",
+    "pyyaml>=6.0",
+    "tomli>=2.0; python_version < '3.11'",
+    "typer>=0.12",
+]
+
+[project.urls]
+Homepage = "https://github.com/ubahmapk/pydoh"
+Repository = "https://github.com/ubahmapk/pydoh"
+Changelog = "https://github.com/ubahmapk/pydoh/blob/main/CHANGELOG.md"
+
+[project.scripts]
+pydoh = "pydoh.cli:app"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.8",
+    "ty>=0.0.1a1",
+]
+
+[tool.ty.environment]
+python-version = "3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
